@@ -14,7 +14,7 @@ this will start a dev server using [Parcel](https://parceljs.org/), which has bu
 ```shell
 yarn start-bs
 ```
-optionally, you may also use [Browser Sync](https://browsersync.io/) for convenient testing across devices. this will open up an external url that you can access on other devices on the same network
+alternatively, you may also use [Browser Sync](https://browsersync.io/) for convenient testing across devices. this will open up an external url that you can use to access your app on other devices on the same network
 
 ## building
 ```shell
@@ -29,11 +29,11 @@ yarn deploy
 this will deploy the contents of your build folder to [Surge](https://surge.sh/)
 
 ## html
-* Meta tags for mobile apps
+* Meta tags for mobile optimization
 * React favicon
 
 ## css
-* Sass
+* Sass, compiled to CSS thanks to parcel
 * [CSS Reset](https://meyerweb.com/eric/tools/css/reset/)
 * [Normalize.css](https://necolas.github.io/normalize.css/)
 
@@ -44,9 +44,6 @@ this will deploy the contents of your build folder to [Surge](https://surge.sh/)
 
 ## extra
 ```shell
-alias clonefp='git clone https://github.com/dlopez807/fryerpan.git'
-renamefp () { mv fryerpan "$1"; }
-remgit () { cd "$1" && rm -rf .git; }
-fryerpan () { clonefp && renamefp "$1" && remgit "$1"; }
-usage: fryerpan react-app
+fryerpan new-project
 ```
+use fryerpan like create-react-app to start your next project. see [this gist](https://gist.github.com/dlopez807/e5cfe4cf5ad17037b159f8aabf52027a) for more info
