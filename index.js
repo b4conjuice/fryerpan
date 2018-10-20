@@ -1,13 +1,6 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from 'react-dom';
 
-import './reset.css';
-import 'normalize.css';
-import './index.scss';
+import App from './components/App';
 
-import 'babel-core/register';
-import 'babel-polyfill';
-
-import App from './App';
-
-ReactDOM.render(<App />, document.getElementById('root'));
+render(<App />, document.getElementById('root'));
