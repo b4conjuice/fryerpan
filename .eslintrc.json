@@ -19,6 +19,7 @@
     "jquery": true
   },
   "rules": {
+    "no-nested-ternary": 0,
     "no-unused-expressions": [
       "error",
       {
