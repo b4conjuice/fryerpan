@@ -5,26 +5,26 @@
 ```shell
 git clone https://github.com/dlopez807/fryerpan.git
 cd fryerpan
-yarn
-yarn start
+npm install
+npm start
 ```
 this will start a dev server using [Parcel](https://parceljs.org/), which has built in hot module replacement
 
 ## testing
 ```shell
-yarn start-bs
+npm run start-bs
 ```
 alternatively, you may also use [Browser Sync](https://browsersync.io/) for convenient testing across devices. this will open up an external url that you can use to access your app on other devices on the same network
 
 ## building
 ```shell
-yarn build
+npm run build
 ```
 this will bundle your application for production. your html, css, and js will be minified and copied to a build folder
 
 ## deploying
 ```shell
-yarn deploy
+npm run deploy
 ```
 this will deploy the contents of your build folder to [Surge](https://surge.sh/)
 

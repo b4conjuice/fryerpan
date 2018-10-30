@@ -6,10 +6,10 @@
   "license": "MIT",
   "scripts": {
     "start": "parcel index.html --no-cache",
-    "start-bs": "yarn start & yarn bs",
+    "start-bs": "npm run start & npm run bs",
     "bs": "browser-sync start --proxy \"localhost:1234\"",
     "build": "parcel build index.html -d build --public-url ./",
-    "predeploy": "yarn build",
+    "predeploy": "npm run build",
     "deploy": "cd build && surge --domain fryerpan.surge.sh"
   },
   "devDependencies": {
