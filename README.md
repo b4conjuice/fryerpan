@@ -31,6 +31,7 @@ this will deploy the contents of your build folder to [Surge](https://surge.sh/)
 ## html
 * Meta tags for mobile optimization
 * React favicon
+* React icons
 
 ## css
 * Sass, compiled to CSS thanks to parcel
