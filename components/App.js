@@ -1,27 +1,10 @@
 import React, { Component } from 'react';
-import { createGlobalStyle } from 'styled-components';
 import 'babel-core/register';
 import 'babel-polyfill';
 
 import 'normalize.css';
 import '../reset.css';
 import AppStyles from './styles/AppStyles';
-
-const GlobalStyle = createGlobalStyle`
-  :root {
-    --blue: #8b9dc3;
-    --darkBlue: #3b5998;
-    --lightBlue: #dfe3ee;
-    --grey: #f7f7f7;
-    --white: #ffffff;
-  }
-  html, body, #root {
-    position: fixed;
-    overflow: hidden;
-    height: 100%;
-    width: 100%;
-  }
-`;
 
 const body = `a simple react boilerplate for single page web applications`;
 let bodyArray = body.split('');
@@ -53,7 +36,6 @@ export default class App extends Component {
     const { message } = this.state;
     return (
       <AppStyles>
-        <GlobalStyle />
         <header>
           fryerpan{' '}
           <span role="img" aria-label="frying-egg">
@@ -61,7 +43,6 @@ export default class App extends Component {
           </span>
         </header>
         <main>
-          <div className="test">hello</div>
           <textarea
             readOnly
             style={{
