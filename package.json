@@ -9,8 +9,10 @@
     "start-bs": "npm run start & npm run bs",
     "bs": "browser-sync start --proxy \"localhost:1234\"",
     "build": "parcel build index.html -d build --public-url ./",
-    "predeploy": "npm run build",
-    "deploy": "cd build && surge --domain fryerpan.surge.sh"
+    "deploy": "now && now alias",
+    "now-build": "npm run build",
+    "predeploy:surge": "npm run build",
+    "deploy:surge": "cd build && surge --domain fryerpan.surge.sh"
   },
   "dependencies": {
     "babel-core": "^6.26.3",
