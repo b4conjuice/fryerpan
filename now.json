@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "name": "fryerpan",
-  "alias": "fryerpan",
+  "name": "fullstack-frypan",
+  "alias": "fullstack-frypan",
   "builds": [
     {
       "src": "package.json",
@@ -9,6 +9,20 @@
       "config": {
         "distDir": "build"
       }
+    },
+    {
+      "src": "api/node/*.js",
+      "use": "@now/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/api/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/$1"
     }
   ]
 }

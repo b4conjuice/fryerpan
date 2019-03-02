@@ -10,10 +10,11 @@ const body = `a simple react boilerplate for single page web applications`;
 let bodyArray = body.split('');
 export default class App extends Component {
   state = {
+    fry: 'fryerpan',
     message: '',
   };
 
-  componentDidMount() {
+  componentDidMount = async () => {
     setInterval(() => {
       if (bodyArray.length > 0) {
         const textarea = document.querySelector('textarea');
@@ -26,18 +27,28 @@ export default class App extends Component {
         textarea.value = content.slice(0, -1);
       } else bodyArray = body.split('');
     }, 100);
-  }
+
+    const url = `${window.location.href}api/node`;
+    const res = await fetch(url);
+    if (res.ok) {
+      const json = await res.json();
+      const { message: fry } = json;
+      this.setState({ fry });
+    } else {
+      console.log(`res not ok from ${url}`);
+    }
+  };
 
   handleChange = e => {
     this.setState({ message: e.target.value });
   };
 
   render() {
-    const { message } = this.state;
+    const { fry, message } = this.state;
     return (
       <AppStyles>
         <header>
-          fryerpan{' '}
+          {fry}{' '}
           <span role="img" aria-label="frying-egg">
             🍳
           </span>

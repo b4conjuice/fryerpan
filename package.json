@@ -1,11 +1,12 @@
 {
-  "name": "fryerpan",
+  "name": "fullstack-frypan",
   "version": "1.0.0",
   "main": "index.js",
   "author": "daniel lopez",
   "license": "MIT",
   "scripts": {
     "start": "parcel index.html --no-cache",
+    "start:server": "node api/index.js",
     "start-bs": "npm run start & npm run bs",
     "bs": "browser-sync start --proxy \"localhost:1234\"",
     "build": "parcel build index.html -d build --public-url ./",
@@ -17,6 +18,9 @@
   "dependencies": {
     "babel-core": "^6.26.3",
     "babel-polyfill": "^6.26.0",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "mongoose": "^5.4.14",
     "normalize.css": "^8.0.0",
     "prop-types": "^15.6.2",
     "react": "^16.6.0",
