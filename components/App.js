@@ -28,7 +28,7 @@ export default class App extends Component {
       } else bodyArray = body.split('');
     }, 100);
 
-    const url = `${window.location.href}api/node`;
+    const url = `${window.location.href}api`;
     const res = await fetch(url);
     if (res.ok) {
       const json = await res.json();
