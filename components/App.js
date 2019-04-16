@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import 'babel-core/register';
-import 'babel-polyfill';
 
 import 'normalize.css';
 import '../reset.css';
